@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    background-color: #F6E7CB;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+.filter {
+    margin: 20px 0;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.category-button {
+    background-color:  #5d8d4f;    
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.category-button:hover {
+    background-color: #758862;
+}
+
+/* Estilos para os cards de venda */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.buy-button {
+    background-color:  #5d8d4f;    
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #93a97c;
+}
+
+.custom-checkout-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-checkout-button:hover {
+    background-color: darkgreen;
+}
+/* Estilização do ícone do carrinho */
+#cartItemCount {
+    color: rgb(0, 0, 0); 
+}
+

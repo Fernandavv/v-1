@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+    
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-card: #a62121;
+  --blue-card: #4be698;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+  background-color: var(--dark-color-lighten);
+  font-family: "Montserrat", sans-serif;
+}
+body::after {
+  content: "";
+  position: absolute; /* Torna a imagem fixa */
+  top: 0;
+  left: 0;
+  width: 1320px;
+  height: 1080px;
+  background: url('../img/Artboard_74_novo.png');
+  background-size: cover;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.content-right {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .container {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+.header-icon .bi {
+    color: #333; /* Cor inicial dos ícones */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+  }
+  
+  .header-icon.scrolled .bi{
+    color: #5b8050; /* Cor quando a página é rolada */
+  }
+    
+  
+  header.scrolled {
+    background: #93a97c; /* Cor de fundo após rolar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra após rolar */
+  }
+  
+  header.scrolled .navbar a,
+  header.scrolled .header-icon i {
+    color: #fff; /* Cor dos links e ícones após rolar */
+  }
+  
+
+
+
+body{
+    color: var(--text-color);
+    background-color: #F6E7CB;
+}
+section{
+    padding: -20px 5%;
+}
+
+img{
+    width: 100%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    background: transparent; /* Header inicialmente transparente */
+    transition: background 0.3s ease-in-out;
+  }
+.logo img{
+    width: 100px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar a{
+    
+    padding: 8px 17px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+
+}
+.navbar a:hover{
+    text-decoration: none;
+    background: #4b504d;
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+
+}
+
+.navbar li a.selected {
+    color: #e4e4e4; 
+    font-weight: bold; 
+
+  }
+  
+  
+
+/* Estilo padrão dos links no navbar */
+.navbar li a {
+    font-weight: bold;
+    position: relative; /* Para posicionamento do elemento ::before */
+    color: #5b8050; /* Cor do texto não selecionado */
+    text-decoration: none; /* Remova a sublinhado padrão */
+    padding: 10px; /* Espaçamento interno */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+  }
+  
+
+  .navbar li a::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 2px;
+    transform: scaleX(0); 
+    transform-origin: 0 0; 
+    transition: transform 0.3s; 
+  }
+  
+ 
+  .navbar li a:hover::before {
+    transform: scaleX(1); 
+  }
+  
+
+
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+.header-icon .bi {
+color: var(--text-color);    
+}
+.header-icon .bi:hover {
+    color: #5d8d4f;    
+    }
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo sobreposição */
+.content .content-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%; 
+    max-height: 100%; 
+    background: url('img/Artboard_74_novo.png');
+    background-size: cover; 
+    opacity: 0.7; 
+    z-index: -1;
+  }
+  
+
+  .content .content-right img {
+    width: 100%;
+    display: block;
+  }
+
+  
+
+
+
+.grid {
+    margin-left:6%;
+    margin-top: 100px; 
+  }
+.content{
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap:30px;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.content .content-left .info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+  font-weight: bold ; /* Adicione negrito para tornar a fonte mais grossa */
+  color: #ebebeb;
+
+}
+.content .content-left .info p{
+    font-size: 23px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+}
+
+/*button*/
+
+.content .content-left button{
+    padding: 10px 23px;
+    background-color: #5b8050;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.content .content-right{
+    display: block;
+    width: 100%;
+}
+
+
+  
+
+  /* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+    }
+
+    .header-icon {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,49 @@
+
+#botoes {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #botoes button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #botoes button.active {
+    background-color: #0056b3;
+  }
+  
+  #cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .card-price {
+    font-weight: bold;
+  }
+  
